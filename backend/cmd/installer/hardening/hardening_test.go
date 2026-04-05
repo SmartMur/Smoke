@@ -900,14 +900,14 @@ func TestSyncLangfuseState(t *testing.T) {
 				},
 				"LANGFUSE_INIT_PROJECT_SECRET_KEY": {
 					Name:      "LANGFUSE_INIT_PROJECT_SECRET_KEY",
-					Value:     "sk-lf-87654321-4321-4321-4321-cba987654321",
+					Value:     "lf_secret_placeholder",
 					IsChanged: true,
 				},
 			},
 			expectedVars: map[string]string{
 				"LANGFUSE_PROJECT_ID": "cm47619l0000872mcd2dlbqwb",
 				"LANGFUSE_PUBLIC_KEY": "pk-lf-12345678-1234-1234-1234-123456789abc",
-				"LANGFUSE_SECRET_KEY": "sk-lf-87654321-4321-4321-4321-cba987654321",
+				"LANGFUSE_SECRET_KEY": "lf_secret_placeholder",
 			},
 			expectedFlags: map[string]bool{
 				"LANGFUSE_PROJECT_ID": true,

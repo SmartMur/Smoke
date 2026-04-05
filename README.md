@@ -702,13 +702,13 @@ Include the API token in the `Authorization` header of your HTTP requests:
 ```bash
 # GraphQL API example
 curl -X POST https://your-pentagi-instance:8443/api/v1/graphql \
-  -H "Authorization: Bearer YOUR_API_TOKEN" \
+  -H "Authorization: Bearer <REDACTED_TOKEN>" \
   -H "Content-Type: application/json" \
   -d '{"query": "{ flows { id title status } }"}'
 
 # REST API example
 curl https://your-pentagi-instance:8443/api/v1/flows \
-  -H "Authorization: Bearer YOUR_API_TOKEN"
+  -H "Authorization: Bearer <REDACTED_TOKEN>"
 ```
 
 ### API Exploration and Testing
@@ -723,7 +723,7 @@ Access the GraphQL Playground at `https://your-pentagi-instance:8443/api/v1/grap
 2. Add your authorization header:
    ```json
    {
-     "Authorization": "Bearer YOUR_API_TOKEN"
+     "Authorization": "Bearer <REDACTED_TOKEN>"
    }
    ```
 3. Explore the schema, run queries, and test mutations interactively
@@ -733,7 +733,7 @@ Access the GraphQL Playground at `https://your-pentagi-instance:8443/api/v1/grap
 Access the REST API documentation at `https://your-pentagi-instance:8443/api/v1/swagger/index.html`
 
 1. Click the **Authorize** button
-2. Enter your token in the format: `Bearer YOUR_API_TOKEN`
+2. Enter your token in the format: `Bearer <REDACTED_TOKEN>`
 3. Click **Authorize** to apply
 4. Test endpoints directly from the Swagger UI
 
@@ -809,7 +809,7 @@ mutation CreateFlow {
 
 ```bash
 curl https://your-pentagi-instance:8443/api/v1/flows \
-  -H "Authorization: Bearer YOUR_API_TOKEN" \
+  -H "Authorization: Bearer <REDACTED_TOKEN>" \
   | jq '.flows[] | {id, title, status}'
 ```
 
